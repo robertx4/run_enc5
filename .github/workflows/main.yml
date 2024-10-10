@@ -39,7 +39,7 @@ jobs:
       - name: Cloning Repo
         continue-on-error: true
         run: |
-          git clone -b main https://${{ secrets.GIT_NAME }}:${{ secrets.GIT_TOKEN }}@${{ secrets.BOT_REPO }} ${{ secrets.GIT_NAME }}
+          git clone -b patch-5 https://${{ secrets.GIT_NAME }}:${{ secrets.GIT_TOKEN }}@${{ secrets.BOT_REPO }} ${{ secrets.GIT_NAME }}
 
       - name: Build and run Docker
         if: matrix.os != 'macos-14'
